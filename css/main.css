@@ -1,0 +1,194 @@
+:root {
+  --vermelho: #e50914;
+  --preto: #141414;
+  --cinza: #aaaaaa;
+  --branco: #ffffff;
+
+  --sombra: rgba(0, 0, 0, 0.5);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* elementos base */
+body {
+  background: var(--preto);
+  font-family: "Arial", Times, serif;
+  color: var(--branco);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: var(--preto);
+  transition: 0.5s ease all;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+}
+
+header .nav-esquerda {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-esquerda a {
+  margin: 5px;
+}
+
+.nav-esquerda .logo {
+  width: 10%;
+  margin-right: 10px;
+}
+
+header .nav-direita {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0px 10px;
+}
+
+.nav-direita a {
+  margin: 0 10px;
+}
+.nav-direita a i {
+  font-size: 23px;
+}
+
+.nav-direita .perfil {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--cinza);
+  margin-right: 10px;
+}
+
+header nav a:hover {
+  color: var(--branco);
+}
+
+/* filme principal */
+
+.filme-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  font-size: 16px;
+  background: linear-gradient(var(--sombra), var(--sombra) 100%),
+    url("../img/capa-house-of-cards.jpg");
+  height: 400px;
+  background-size: cover;
+}
+
+.filme-principal .descricao {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+  margin-top: 15%;
+  font-size: 40px;
+  font-family: "Trebuchet MS" Arial, sans-serif;
+}
+
+.botao {
+  background-color: var(--sombra);
+  border: none;
+  color: var(--branco);
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.botao:hover {
+  background-color: var(--branco);
+  color: #000;
+}
+
+.botao i {
+  margin-right: 8px;
+}
+
+.container {
+  margin-left: 20px;
+}
+.filme-principal .container {
+  width: 70%;
+}
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carrosel-filmes {
+  margin-top: 5px;
+}
+
+/* Modal  */
+
+.modal {
+   display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  border-radius: 4px;
+  border: none;
+  background-color: var(--branco);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid var(--cinza);
+  width: 80%;
+  color: var(--preto);
+}
+
+.modal-content iframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  height: 400px;
+  margin: 50px 65px;
+}
+
+.close {
+  color: var(--cinza);
+  float: right;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
